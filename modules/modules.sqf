@@ -6,15 +6,17 @@
 //Enabled modules by default, disable them by adding // in front.
 
 #include "acre_setup\root.sqf"
-#include "ai_drivers\root.sqf"
+//#include "ai_drivers\root.sqf"
 #include "anti_nd\root.sqf"
 #include "auto_track_assets\root.sqf"
 #include "disconnect_control\root.sqf"
-#include "eg_spectator_mode\root.sqf"
+//#include "eg_spectator_mode\root.sqf"
 #include "jip\root.sqf"
 #include "self_actions\root.sqf"
 #include "shot_count\root.sqf"
 #include "start_on_safe\root.sqf"
+
+//#include "Interact_generator\root.sqf"
 
 //Additional modules that can be enabled by removing the //
 //!!Some of them require changing settings in their settings.sqf file!!

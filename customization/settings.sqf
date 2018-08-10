@@ -9,7 +9,7 @@ if (isServer) then {
 	FW_TimeLimitMessage = "TIME LIMIT REACHED!"; //The message displayed when the time runs out
 
 	[west, "USAF", "player"] call FNC_AddTeam; //Adds a player team called USMC on side west
-	[east, "VDV", "ai"] call FNC_AddTeam; //Adds a ai team called VDV on side east
+	//[east, "VDV", "ai"] call FNC_AddTeam; //Adds a ai team called VDV on side east
 	
 	// [resistance, "Local Militia", "player"] call FNC_AddTeam; //Adds a player team called Local Militia on side resistance (aka independent)
 

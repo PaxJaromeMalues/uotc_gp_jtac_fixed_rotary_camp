@@ -3,10 +3,10 @@
 </p>
 <p align="center">
     <a href="https://github.com/PaxJaromeMalues/uotc_gp_jtac_fixed_rotary_camp/releases/latest">
-        <img src="https://img.shields.io/badge/Version-2.0.2-green.svg" alt="Version">
+        <img src="https://img.shields.io/badge/Version-1.0.0-green.svg" alt="Version">
     </a>
-	<a href="https://github.com/dklollol/Olsen-Framework-Arma-3/releases/tag/3.3.2">
-        <img src="https://img.shields.io/badge/OFW-3.3.2-blue.svg" alt="OFW">
+	<a href="https://github.com/dklollol/Olsen-Framework-Arma-3/releases/tag/3.3.3">
+        <img src="https://img.shields.io/badge/OFW-3.3.3-blue.svg" alt="OFW">
     </a>
     <a href="https://github.com/PaxJaromeMalues/uotc_gp_jtac_fixed_rotary_camp/issues">
         <img src="https://img.shields.io/github/issues-raw/PaxJaromeMalues/uotc_gp_jtac_fixed_rotary_camp.svg?label=Issues" alt="FC2 Issues">

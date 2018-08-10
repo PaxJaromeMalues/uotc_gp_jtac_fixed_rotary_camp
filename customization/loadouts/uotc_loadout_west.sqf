@@ -2,7 +2,7 @@
 //OFWvUsed: 3.3.2
 
 #define package "uotc_loadout_west_"
-
+/*
 SET_GROUP(ifak)
 	["ACE_fieldDressing", 2, "uniform"] call FNC_AddItem;
 	["ACE_elasticBandage", 2, "uniform"] call FNC_AddItem;
@@ -25,161 +25,304 @@ SET_GROUP(items)
 	["ItemMap"] call FNC_AddItem;
 	["ItemCompass"] call FNC_AddItem;
 	["ItemWatch"] call FNC_AddItem;
+	["ACE_Vector"] call FNC_AddItem;
 	["ACE_MapTools", 1, "vest"] call FNC_AddItem;
+	["ACE_Chemlight_IR", 1] call FNC_AddItem;
+	["ACE_IR_Strobe_Item", 1] call FNC_AddItem;
+	["ACE_Flashlight_MX991", 1] call FNC_AddItem;
+	["ACE_microDAGR", 1] call FNC_AddItem;
 END_GROUP;
 
 SET_GROUP(radios)
-	["ACRE_PRC343", 1, "vest"] call FNC_AddItem;
 END_GROUP;
 
 SET_GROUP(sidearm)
+	["rhsusf_weap_m9"] call FNC_AddItem;
+	["rhsusf_mag_15Rnd_9x19_JHP", 3] call FNC_AddItem;
 END_GROUP;
 
 SET_GROUP(primary)
-	["rhs_weap_m4a1_blockII_d"] call FNC_AddItem;
-	["rhsusf_acc_SF3P556"] call FNC_AddItem;
-	["rhsusf_acc_M952V"] call FNC_AddItem;
+	["rhs_weap_m4a1_carryhandle"] call FNC_AddItem; //Primary rifle
+	["rhsusf_acc_ACOG2_USMC"] call FNC_AddItem; //Red dot sight
+	["rhsusf_acc_anpeq16a"] call FNC_AddItem;
 END_GROUP;
+*/
+/////////////////////
+//CASES Instructors
+/////////////////////
 
-//////////////
-//CASES SPAWN
-//////////////
+case (package + "ins_jtac"): {
+	
+["rhs_uniform_cu_ocp"] call FNC_AddItem;
+["rhsusf_iotv_ocp_Squadleader"] call FNC_AddItem;
+["rhsusf_assault_eagleaiii_ocp"] call FNC_AddItem;
 
-case (package + "CI"): {
-	
-	["rhs_uniform_cu_ocp"] call FNC_AddItem; //Uniform
-	["rhsusf_iotv_ocp_Squadleader"] call FNC_AddItem; //Vest
-	//[""] call FNC_AddItem; //NoRuckForTI
-	["tin_helmet_uotc_beret"] call FNC_AddItem; //HeadGear
-	
-	ADD_GROUP(ifak);
-	
-	["ACE_microDAGR", 1, "uniform"] call FNC_AddItem;
-	["ACE_personalAidKit", 6, "vest"] call FNC_AddItem;
-	
-	ADD_GROUP(sidearm);
-	ADD_GROUP(primary);
-	ADD_GROUP(items);
-	
-	["Rangefinder"] call FNC_AddItem;
-	
-	ADD_GROUP(radios);
-	
-	["ACRE_PRC152", 1, "vest"] call FNC_AddItem;
+["tin_helmet_uotc_beret"] call FNC_AddItem;
+["rhs_googles_clear"] call FNC_AddItem;
 
-};
+["ItemMap"] call FNC_AddItem;
+["ItemCompass"] call FNC_AddItem;
+["ItemWatch"] call FNC_AddItem;
+["ACE_VectorDay"] call FNC_AddItem;
 
-case (package + "TI"): {
-	
-	["rhs_uniform_cu_ocp"] call FNC_AddItem; //Uniform
-	["rhsusf_iotv_ocp_Squadleader"] call FNC_AddItem; //Vest
-	//[""] call FNC_AddItem; //NoRuckForTI
-	["tin_helmet_uotc_beret"] call FNC_AddItem; //HeadGear
-	
-	ADD_GROUP(ifak);
-	
-	["ACE_microDAGR", 1, "uniform"] call FNC_AddItem;
-	["ACE_personalAidKit", 6, "vest"] call FNC_AddItem;
-	
-	ADD_GROUP(sidearm);
-	ADD_GROUP(primary);
-	ADD_GROUP(items);
-	
-	["Rangefinder"] call FNC_AddItem;
-	
-	ADD_GROUP(radios);
-	
-	["ACRE_PRC152", 1, "vest"] call FNC_AddItem;
+["ACE_quikclot",2,"uniform"] call FNC_AddItem;
+["ACE_elasticBandage",2,"uniform"] call FNC_AddItem;
+["ACE_fieldDressing",2,"uniform"] call FNC_AddItem;
+["ACE_epinephrine",1,"uniform"] call FNC_AddItem;
+["ACE_morphine",1,"uniform"] call FNC_AddItem;
+["ACE_tourniquet",1,"uniform"] call FNC_AddItem;
+["ACE_packingBandage",2,"uniform"] call FNC_AddItem;
+["ACE_MapTools",1,"uniform"] call FNC_AddItem;
+["ACE_microDAGR",1,"uniform"] call FNC_AddItem;
+["ACE_IR_Strobe_Item",1,"uniform"] call FNC_AddItem;
+["ACE_Flashlight_MX991",1,"uniform"] call FNC_AddItem;
+["ACE_EarPlugs",1,"uniform"] call FNC_AddItem;
+["ACE_Kestrel4500",1,"uniform"] call FNC_AddItem;
+["ACRE_PRC343",1,"uniform"] call FNC_AddItem;
+["ACRE_PRC148",1,"uniform"] call FNC_AddItem;
+["ACE_Chemlight_IR",1,"uniform"] call FNC_AddItem;
+["rhs_mag_30Rnd_556x45_M855A1_Stanag",6,"vest"] call FNC_AddItem;
+["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,"vest"] call FNC_AddItem;
+["rhs_mag_m713_Red",8,"vest"] call FNC_AddItem;
+["ACRE_PRC117F",1,"backpack"] call FNC_AddItem;
+["rhs_mag_m18_green",3,"backpack"] call FNC_AddItem;
+
+["rhs_weap_m4a1_m320"] call FNC_AddItem;
+_unit addPrimaryWeaponItem "rhsusf_acc_SFMB556";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
+_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_3d";
+
+["rhsusf_weap_m9"] call FNC_AddItem;
 
 };
 
-case (package + "PT"): {
+case (package + "ins_fw"): {
 	
-	["rhs_uniform_cu_ocp"] call FNC_AddItem; //Uniform
-	["rhsusf_iotv_ocp_Rifleman"] call FNC_AddItem; //Vest
-	//[""] call FNC_AddItem; //NoRuckForPTSpawn
-	//[""] call FNC_AddItem; //NoHeadGearParticipantSpawn
-	
-	ADD_GROUP(ifak_participant);
-	ADD_GROUP(sidearm);
-	ADD_GROUP(primary);
-	ADD_GROUP(items);
-	
-	["Binocular", 1] call FNC_AddItem;
-	
-	ADD_GROUP(radios);
+["U_I_pilotCoveralls"] call FNC_AddItem;
+["UK3CB_BAF_V_Pilot_DPMW"] call FNC_AddItem;
+["B_Parachute"] call FNC_AddItem;
+
+["H_PilotHelmetFighter_B"] call FNC_AddItem;
+
+["ItemMap"] call FNC_AddItem;
+["ItemCompass"] call FNC_AddItem;
+["ACE_Altimeter"] call FNC_AddItem;
+
+["tin_helmet_uotc_beret", 1, "vest"] call FNC_AddItem;
+["ACE_quikclot",2,"uniform"] call FNC_AddItem;
+["ACE_elasticBandage",2,"uniform"] call FNC_AddItem;
+["ACE_fieldDressing",2,"uniform"] call FNC_AddItem;
+["ACE_epinephrine",1,"uniform"] call FNC_AddItem;
+["ACE_morphine",1,"uniform"] call FNC_AddItem;
+["ACE_tourniquet",1,"uniform"] call FNC_AddItem;
+["ACE_packingBandage",2,"uniform"] call FNC_AddItem;
+["ACE_MapTools",1,"uniform"] call FNC_AddItem;
+["ACE_microDAGR",1,"uniform"] call FNC_AddItem;
+["ACE_IR_Strobe_Item",1,"uniform"] call FNC_AddItem;
+["ACE_Flashlight_MX991",1,"uniform"] call FNC_AddItem;
+["ACE_EarPlugs",1,"uniform"] call FNC_AddItem;
+["ACE_Kestrel4500",1,"uniform"] call FNC_AddItem;
+["ACRE_PRC152",1,"uniform"] call FNC_AddItem;
+["ACE_Chemlight_IR",1,"uniform"] call FNC_AddItem;
+["rhsusf_mag_15Rnd_9x19_JHP",3,"uniform"] call FNC_AddItem;
+["ACE_Chemlight_Shield",2,"vest"] call FNC_AddItem;
+["ACE_CableTie",1,"vest"] call FNC_AddItem;
+["hlc_30Rnd_9x19_SD_MP5",5,"vest"] call FNC_AddItem;
+["rhs_mag_an_m8hc",2,"vest"] call FNC_AddItem;
+["Chemlight_green",2,"vest"] call FNC_AddItem;
+["ACE_Chemlight_IR",2,"vest"] call FNC_AddItem;
+["rhs_mag_m18_green",2,"vest"] call FNC_AddItem;
+["ACE_HandFlare_Green",2,"vest"] call FNC_AddItem;
+["HandGrenade",2,"vest"] call FNC_AddItem;
+
+["hlc_smg_mp5k_PDW"] call FNC_AddItem;
+_unit addPrimaryWeaponItem "rhsusf_acc_eotech_552";
+
+["rhsusf_weap_m9"] call FNC_AddItem;
 
 };
 
-/////////////////
-//CASES SELECTOR
-/////////////////
+case (package + "ins_rw"): {
+	
+["U_I_pilotCoveralls"] call FNC_AddItem;
+["UK3CB_BAF_V_Pilot_DPMW"] call FNC_AddItem;
+["B_Parachute"] call FNC_AddItem;
 
-case (package + "GRN"): {
-	
-	["rhs_uniform_cu_ocp"] call FNC_AddItem; //Uniform
-	["rhsusf_iotv_ocp_Grenadier"] call FNC_AddItem; //Vest
-	//[""] call FNC_AddItem; //NoRuckForGRN
-	["rhsusf_ach_helmet_headset_ocp"] call FNC_AddItem; //Head
-	
-	ADD_GROUP(ifak_participant);
-	ADD_GROUP(sidearm);
-	ADD_GROUP(items);
-	
-	["Binocular", 1] call FNC_AddItem;
-	
-	ADD_GROUP(radios);
+["UK3CB_BAF_H_PilotHelmetHeli_A"] call FNC_AddItem;
 
-	["rhs_weap_m4a1_m320"] call FNC_AddItem;
-	["rhsusf_acc_M952V"] call FNC_AddItem;
-	["rhsusf_acc_compm4"] call FNC_AddItem;
-	["rhs_mag_M441_HE", 4, "vest"] call FNC_AddItem;
-	["rhs_mag_M433_HEDP", 4, "vest"] call FNC_AddItem;
-	
+["ItemMap"] call FNC_AddItem;
+["ItemCompass"] call FNC_AddItem;
+["ACE_Altimeter"] call FNC_AddItem;
+
+["tin_helmet_uotc_beret", 1, "vest"] call FNC_AddItem;
+["ACE_quikclot",2,"uniform"] call FNC_AddItem;
+["ACE_elasticBandage",2,"uniform"] call FNC_AddItem;
+["ACE_fieldDressing",2,"uniform"] call FNC_AddItem;
+["ACE_epinephrine",1,"uniform"] call FNC_AddItem;
+["ACE_morphine",1,"uniform"] call FNC_AddItem;
+["ACE_tourniquet",1,"uniform"] call FNC_AddItem;
+["ACE_packingBandage",2,"uniform"] call FNC_AddItem;
+["ACE_MapTools",1,"uniform"] call FNC_AddItem;
+["ACE_microDAGR",1,"uniform"] call FNC_AddItem;
+["ACE_IR_Strobe_Item",1,"uniform"] call FNC_AddItem;
+["ACE_Flashlight_MX991",1,"uniform"] call FNC_AddItem;
+["ACE_EarPlugs",1,"uniform"] call FNC_AddItem;
+["ACE_Kestrel4500",1,"uniform"] call FNC_AddItem;
+["ACRE_PRC148",1,"uniform"] call FNC_AddItem;
+["ACE_Chemlight_IR",1,"uniform"] call FNC_AddItem;
+["rhsusf_mag_15Rnd_9x19_JHP",3,"uniform"] call FNC_AddItem;
+["ACE_Chemlight_Shield",2,"vest"] call FNC_AddItem;
+["ACE_CableTie",1,"vest"] call FNC_AddItem;
+["hlc_30Rnd_9x19_SD_MP5",5,"vest"] call FNC_AddItem;
+["rhs_mag_an_m8hc",2,"vest"] call FNC_AddItem;
+["Chemlight_green",2,"vest"] call FNC_AddItem;
+["ACE_Chemlight_IR",2,"vest"] call FNC_AddItem;
+["rhs_mag_m18_green",2,"vest"] call FNC_AddItem;
+["ACE_HandFlare_Green",2,"vest"] call FNC_AddItem;
+["HandGrenade",2,"vest"] call FNC_AddItem;
+
+["hlc_smg_mp5k_PDW"] call FNC_AddItem;
+_unit addPrimaryWeaponItem "rhsusf_acc_eotech_552";
+
+["rhsusf_weap_m9"] call FNC_AddItem;
+
 };
 
-case (package + "AR"): {
-	
-	["rhs_uniform_cu_ocp"] call FNC_AddItem; //Uniform
-	["rhsusf_iotv_ocp_SAW"] call FNC_AddItem; //Vest
-	//[""] call FNC_AddItem; //NoRuckForAR
-	["rhsusf_ach_helmet_headset_ocp"] call FNC_AddItem; //Head
-	
-	ADD_GROUP(ifak_participant);
-	ADD_GROUP(sidearm);
-	ADD_GROUP(items);
-	
-	["Binocular", 1] call FNC_AddItem;
-	
-	ADD_GROUP(radios);
+/////////////////////
+//CASES Participants
+/////////////////////
 
-	["rhs_weap_m249_pip_S"] call FNC_AddItem;
-	["rhsusf_acc_M952V"] call FNC_AddItem;
-	["rhsusf_acc_ELCAN"] call FNC_AddItem;
-	["rhsusf_100Rnd_556x45_soft_pouch", 2, "vest"] call FNC_AddItem;
+case (package + "jtac"): {
 	
+["rhs_uniform_cu_ocp"] call FNC_AddItem;
+["rhsusf_iotv_ocp_Squadleader"] call FNC_AddItem;
+["rhsusf_assault_eagleaiii_ocp"] call FNC_AddItem;
+
+["rhsusf_ach_helmet_headset_ocp"] call FNC_AddItem;
+["rhs_googles_clear"] call FNC_AddItem;
+
+["ItemMap"] call FNC_AddItem;
+["ItemCompass"] call FNC_AddItem;
+["ItemWatch"] call FNC_AddItem;
+["ACE_VectorDay"] call FNC_AddItem;
+
+["ACE_quikclot",2,"uniform"] call FNC_AddItem;
+["ACE_elasticBandage",2,"uniform"] call FNC_AddItem;
+["ACE_fieldDressing",2,"uniform"] call FNC_AddItem;
+["ACE_epinephrine",1,"uniform"] call FNC_AddItem;
+["ACE_morphine",1,"uniform"] call FNC_AddItem;
+["ACE_tourniquet",1,"uniform"] call FNC_AddItem;
+["ACE_packingBandage",2,"uniform"] call FNC_AddItem;
+["ACE_MapTools",1,"uniform"] call FNC_AddItem;
+["ACE_microDAGR",1,"uniform"] call FNC_AddItem;
+["ACE_IR_Strobe_Item",1,"uniform"] call FNC_AddItem;
+["ACE_Flashlight_MX991",1,"uniform"] call FNC_AddItem;
+["ACE_EarPlugs",1,"uniform"] call FNC_AddItem;
+["ACE_Kestrel4500",1,"uniform"] call FNC_AddItem;
+["ACRE_PRC343",1,"uniform"] call FNC_AddItem;
+["ACRE_PRC148",1,"uniform"] call FNC_AddItem;
+["ACE_Chemlight_IR",1,"uniform"] call FNC_AddItem;
+["rhs_mag_30Rnd_556x45_M855A1_Stanag",6,"vest"] call FNC_AddItem;
+["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,"vest"] call FNC_AddItem;
+["rhs_mag_m713_Red",8,"vest"] call FNC_AddItem;
+["ACRE_PRC117F",1,"backpack"] call FNC_AddItem;
+["rhs_mag_m18_green",3,"backpack"] call FNC_AddItem;
+
+["rhs_weap_m4a1_m320"] call FNC_AddItem;
+_unit addPrimaryWeaponItem "rhsusf_acc_SFMB556";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq16a";
+_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_3d";
+
+["rhsusf_weap_m9"] call FNC_AddItem;
+
 };
 
-case (package + "RM"): {
+case (package + "fw"): {
 	
-	["rhs_uniform_cu_ocp"] call FNC_AddItem; //Uniform
-	["rhsusf_iotv_ocp_Rifleman"] call FNC_AddItem; //Vest
-	//[""] call FNC_AddItem; //NoRuckForAR
-	["rhsusf_ach_helmet_headset_ocp"] call FNC_AddItem; //Head
-	
-	ADD_GROUP(ifak_participant);
-	ADD_GROUP(sidearm);
-	ADD_GROUP(items);
-	
-	["Binocular", 1] call FNC_AddItem;
-	
-	ADD_GROUP(radios);
+["U_I_pilotCoveralls"] call FNC_AddItem;
+["UK3CB_BAF_V_Pilot_DPMW"] call FNC_AddItem;
+["B_Parachute"] call FNC_AddItem;
 
-	["rhs_weap_m4a1_blockII_d"] call FNC_AddItem;
-	["rhs_weap_M136"] call FNC_AddItem;
-	["rhs_m136_mag"] call FNC_AddItem;
-	["rhsusf_acc_SF3P556"] call FNC_AddItem;
-	["rhsusf_acc_M952V"] call FNC_AddItem;
-	["rhsusf_acc_ACOG3"] call FNC_AddItem;
+["H_PilotHelmetFighter_B"] call FNC_AddItem;
+
+["ItemMap"] call FNC_AddItem;
+["ItemCompass"] call FNC_AddItem;
+["ACE_Altimeter"] call FNC_AddItem;
+
+["ACE_quikclot",2,"uniform"] call FNC_AddItem;
+["ACE_elasticBandage",2,"uniform"] call FNC_AddItem;
+["ACE_fieldDressing",2,"uniform"] call FNC_AddItem;
+["ACE_epinephrine",1,"uniform"] call FNC_AddItem;
+["ACE_morphine",1,"uniform"] call FNC_AddItem;
+["ACE_tourniquet",1,"uniform"] call FNC_AddItem;
+["ACE_packingBandage",2,"uniform"] call FNC_AddItem;
+["ACE_MapTools",1,"uniform"] call FNC_AddItem;
+["ACE_microDAGR",1,"uniform"] call FNC_AddItem;
+["ACE_IR_Strobe_Item",1,"uniform"] call FNC_AddItem;
+["ACE_Flashlight_MX991",1,"uniform"] call FNC_AddItem;
+["ACE_EarPlugs",1,"uniform"] call FNC_AddItem;
+["ACE_Kestrel4500",1,"uniform"] call FNC_AddItem;
+["ACRE_PRC152",1,"uniform"] call FNC_AddItem;
+["ACE_Chemlight_IR",1,"uniform"] call FNC_AddItem;
+["rhsusf_mag_15Rnd_9x19_JHP",3,"uniform"] call FNC_AddItem;
+["ACE_Chemlight_Shield",2,"vest"] call FNC_AddItem;
+["ACE_CableTie",1,"vest"] call FNC_AddItem;
+["hlc_30Rnd_9x19_SD_MP5",5,"vest"] call FNC_AddItem;
+["rhs_mag_an_m8hc",2,"vest"] call FNC_AddItem;
+["Chemlight_green",2,"vest"] call FNC_AddItem;
+["ACE_Chemlight_IR",2,"vest"] call FNC_AddItem;
+["rhs_mag_m18_green",2,"vest"] call FNC_AddItem;
+["ACE_HandFlare_Green",2,"vest"] call FNC_AddItem;
+["HandGrenade",2,"vest"] call FNC_AddItem;
+
+["hlc_smg_mp5k_PDW"] call FNC_AddItem;
+_unit addPrimaryWeaponItem "rhsusf_acc_eotech_552";
+
+["rhsusf_weap_m9"] call FNC_AddItem;
+
+};
+
+case (package + "rw"): {
+	
+["U_I_pilotCoveralls"] call FNC_AddItem;
+["UK3CB_BAF_V_Pilot_DPMW"] call FNC_AddItem;
+["B_Parachute"] call FNC_AddItem;
+
+["UK3CB_BAF_H_PilotHelmetHeli_A"] call FNC_AddItem;
+
+["ItemMap"] call FNC_AddItem;
+["ItemCompass"] call FNC_AddItem;
+["ACE_Altimeter"] call FNC_AddItem;
+
+["ACE_quikclot",2,"uniform"] call FNC_AddItem;
+["ACE_elasticBandage",2,"uniform"] call FNC_AddItem;
+["ACE_fieldDressing",2,"uniform"] call FNC_AddItem;
+["ACE_epinephrine",1,"uniform"] call FNC_AddItem;
+["ACE_morphine",1,"uniform"] call FNC_AddItem;
+["ACE_tourniquet",1,"uniform"] call FNC_AddItem;
+["ACE_packingBandage",2,"uniform"] call FNC_AddItem;
+["ACE_MapTools",1,"uniform"] call FNC_AddItem;
+["ACE_microDAGR",1,"uniform"] call FNC_AddItem;
+["ACE_IR_Strobe_Item",1,"uniform"] call FNC_AddItem;
+["ACE_Flashlight_MX991",1,"uniform"] call FNC_AddItem;
+["ACE_EarPlugs",1,"uniform"] call FNC_AddItem;
+["ACE_Kestrel4500",1,"uniform"] call FNC_AddItem;
+["ACRE_PRC148",1,"uniform"] call FNC_AddItem;
+["ACE_Chemlight_IR",1,"uniform"] call FNC_AddItem;
+["rhsusf_mag_15Rnd_9x19_JHP",3,"uniform"] call FNC_AddItem;
+["ACE_Chemlight_Shield",2,"vest"] call FNC_AddItem;
+["ACE_CableTie",1,"vest"] call FNC_AddItem;
+["hlc_30Rnd_9x19_SD_MP5",5,"vest"] call FNC_AddItem;
+["rhs_mag_an_m8hc",2,"vest"] call FNC_AddItem;
+["Chemlight_green",2,"vest"] call FNC_AddItem;
+["ACE_Chemlight_IR",2,"vest"] call FNC_AddItem;
+["rhs_mag_m18_green",2,"vest"] call FNC_AddItem;
+["ACE_HandFlare_Green",2,"vest"] call FNC_AddItem;
+["HandGrenade",2,"vest"] call FNC_AddItem;
+
+["hlc_smg_mp5k_PDW"] call FNC_AddItem;
+_unit addPrimaryWeaponItem "rhsusf_acc_eotech_552";
+
+["rhsusf_weap_m9"] call FNC_AddItem;
 
 };

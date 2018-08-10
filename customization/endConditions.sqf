@@ -1,5 +1,5 @@
 private _westCasualty = "USAF" call FNC_CasualtyPercentage; //Gets the casualty percentage of team "USMC"
-private _eastCasualty = "VDV" call FNC_CasualtyPercentage; //Gets the casualty percentage of team "VDV"
+//private _eastCasualty = "VDV" call FNC_CasualtyPercentage; //Gets the casualty percentage of team "VDV"
 /*
 if (_westCasualty >= 50) exitWith {
 	

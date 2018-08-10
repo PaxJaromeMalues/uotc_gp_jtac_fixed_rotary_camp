@@ -43,13 +43,15 @@ FW_enable_channel_names = false;
 
 FW_ChannelNames = [
 	[//WEST - USE SIDE SETTINGS ONLY IF SCRAMBLE IS ON
-		["1", "label", "PLTNET 1"],
-		["2", "label", "PLTNET 2"],
-		["3", "label", "PLTNET 3"],
-		["4", "label", "PLTNET 4"],
-		["5", "label", "COY"],
-		["6", "label", "CAS"],
-		["7", "label", "FIRES"]
+		["1", "label", "GRD1"],
+		["2", "label", "GRD2"],
+		["3", "label", "GRD3"],
+		["4", "label", "AIRFW1"],
+		["5", "label", "AIRFW2"],
+		["6", "label", "AIRFW3"],
+		["4", "label", "AIRRW1"],
+		["5", "label", "AIRRW2"],
+		["6", "label", "AIRRW3"]
 	],
 	[//EAST
 		["1", "label", "PLTNET 1"],
